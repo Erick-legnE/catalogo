@@ -19,7 +19,7 @@ if exist "%~dp0portal_index.html" (
 )
 
 echo [2/5] Gerando dados do catalogo geral...
-python "%~dp0gerar_json.py"
+python "%~dp0gerar_json_aprendiz.py"
 if %errorlevel% neq 0 (
     echo.
     echo  ERRO ao gerar o JSON do catalogo geral.
@@ -30,7 +30,7 @@ if %errorlevel% neq 0 (
 
 echo.
 echo [3/5] Gerando catalogos por representante...
-python "%~dp0gerar_catalogos_representantes.py"
+python "%~dp0gerar_catalogos_representantes_aprendiz.py"
 if %errorlevel% neq 0 (
     echo.
     echo  ERRO ao gerar os catalogos de representantes.
@@ -41,12 +41,12 @@ if %errorlevel% neq 0 (
 
 echo.
 echo [4/5] Enviando para o GitHub...
-"C:\Program Files\Git\bin\git.exe" add -A
-"C:\Program Files\Git\bin\git.exe" commit -m "Atualizacao Portal e Catalogos %date%"
+git add -A
+git commit -m "Atualizacao Portal e Catalogos %date%"
 if %errorlevel% neq 0 (
     echo  Nenhuma alteracao detectada ou erro no commit.
 )
-"C:\Program Files\Git\bin\git.exe" push origin main
+git push origin main
 if %errorlevel% neq 0 (
     echo.
     echo  ERRO ao enviar para o GitHub.
