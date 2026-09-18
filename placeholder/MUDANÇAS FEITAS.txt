@@ -1,0 +1,17 @@
+MUDANÇAS FEITAS/AVANÇOS:
+mudei o link do template_representante_index.html
+e ele ainda não ta como GitHub page mas da pra ver isso dps.
+
+feito o script para extrair info de P's
+
+alias, tenho um macro folder cheio de script e coisa meio útil, se tiver mais coisa útil pretendo colocar no OneDrive.
+
+adicionei um site placeholder no main index (o brasilbotoes.github.io). muito ruim não ter nada para se direcionar.
+Só não consigo dar commit em nada por que não tenho a pasta do estoque, mas disseram que vão me colocar lá.
+
+Também ia precisar do login da conta do github da brasil.
+Ia ser bom se desse pra ter o sql do consistem só para leitura, por que seria uma maneira estável de ter os 
+conteúdos de lá sem precisar ficar extraindo pra planilha.
+
+tava pensando em fazer algum script que pegasse o modelo dxf da faca, fizesse uma versão 3d do mesmo e aplicasse ao botão original do Blender, ou seja, ele pegaria a "Cor" da pastilha (pq tem de pastilha mas não tem botão de referência), ia ter as informações sobre a furação, e baseado nisso ia montar um modelo 3d que daria para renderizar e extrair pra 2d ou 3d. O bom da renderização é que seria parecido com o botão real, pq a faca faz diferença.
+Mas ia ser complicadinho pra fazer.
