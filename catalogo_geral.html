@@ -21,6 +21,21 @@
             --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
             --shadow-hover: 0 12px 24px -4px rgba(0, 186, 210, 0.15);
             --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --featured-bg: linear-gradient(135deg, #ffffff 0%, #f0fdff 100%);
+            --tag-bg: #f1f5f9;
+        }
+
+        /* TEMA ESCURO (Sincronizado com o catálogo de pastilhas) */
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --header-bg: #020617;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+            --featured-bg: linear-gradient(135deg, #1e293b 0%, #082f35 100%);
+            --tag-bg: #0f172a;
         }
 
         * {
@@ -36,16 +51,36 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* BRAND HERO HEADER */
         .hero {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            background: linear-gradient(135deg, var(--header-bg) 0%, #0f172a 100%);
             color: #ffffff;
             padding: 3rem 1.5rem 4rem;
             text-align: center;
             position: relative;
             border-bottom: 6px solid var(--primary);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .hero-content {
@@ -165,7 +200,7 @@
             content: '';
             height: 2px;
             flex: 1;
-            background: #cbd5e1;
+            background: var(--border);
             margin-left: 0.5rem;
         }
 
@@ -188,7 +223,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: var(--tr, var(--transition));
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
@@ -202,7 +237,7 @@
         /* FEATURED CARD SPECIFIC */
         .card.featured {
             grid-column: 1 / -1;
-            background: linear-gradient(135deg, #ffffff 0%, #f0fdff 100%);
+            background: var(--featured-bg);
             border: 4px solid var(--primary);
             flex-direction: row;
             align-items: center;
@@ -244,11 +279,11 @@
         .tag {
             font-size: 0.75rem;
             font-weight: 700;
-            background: #f1f5f9;
+            background: var(--tag-bg);
             color: var(--text-muted);
             padding: 3px 8px;
             border-radius: 6px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--border);
         }
 
         .card-btn {
@@ -274,7 +309,7 @@
             font-size: 0.85rem;
             padding: 2rem 1rem;
             border-top: 1px solid var(--border);
-            background: #ffffff;
+            background: var(--card-bg);
             margin-top: auto;
         }
 
@@ -289,12 +324,17 @@
             .brand-title {
                 font-size: 1.75rem;
             }
+            .theme-toggle {
+                top: 0.75rem;
+                right: 0.75rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <header class="hero">
+        <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙 Escuro</button>
         <div class="hero-content">
             <div class="logo-wrapper">
                 <img src="logo_simbolo.jpeg" alt="Brasil Botões" class="logo-img">
@@ -331,7 +371,7 @@
                 <div class="card-btn">Acessar Catálogo →</div>
             </a>
 
-            <a href="_testes_aprendiz/pastilhas.html" class="card portal-card" data-name="pastilhas acervo cores frente verso">
+            <a href="pastilhas.html" class="card portal-card" data-name="pastilhas acervo cores frente verso">
                 <div class="card-header">
                     <h2>Catálogo de Pastilhas</h2>
                     <p>Visualização simplificada de cores e amostras com galeria frente/verso.</p>
@@ -411,6 +451,25 @@
     </footer>
 
     <script>
+        // Inicialização do tema salvo no localStorage ou preferência do sistema
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.getElementById('theme-btn').textContent = '☀️ Claro';
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                document.getElementById('theme-btn').textContent = '🌙 Escuro';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('theme-btn').textContent = '☀️ Claro';
+            }
+        }
+
         function filterPortals() {
             const query = document.getElementById('portal-search').value.toLowerCase().trim();
             const cards = document.querySelectorAll('.portal-card');
