@@ -46,7 +46,7 @@ git commit -m "Atualizacao Portal e Catalogos %date%"
 if %errorlevel% neq 0 (
     echo  Nenhuma alteracao detectada ou erro no commit.
 )
-git push origin main
+git push origin master
 if %errorlevel% neq 0 (
     echo.
     echo  ERRO ao enviar para o GitHub.
