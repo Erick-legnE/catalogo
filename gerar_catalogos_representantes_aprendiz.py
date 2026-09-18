@@ -39,7 +39,7 @@ import openpyxl
 
 # ======================= CONFIGURACAO =======================
 # Planilha de Clientes (a que voce enviou / atualiza)
-PLANILHA_CLIENTES = r"C:\Users\Aprendiz Financeiro\BRASIL BOTOES LTDA\Público - Documentos\Catálogo Pronta Entrega\_testes_aprendiz\ESTOQUES PROJETO V2 - Clientes_teste.xlsm"
+PLANILHA_CLIENTES = r"C:\Users\Aprendiz Financeiro\Downloads\macrocor\site meu\ESTOQUES PROJETO V2 - Clientes_teste.xlsm"
 ABA_CLIENTES = "Cliente"
 LINHA_CABECALHO = 11   # linha do cabecalho na planilha (a partir dela, +1 = dados)
 

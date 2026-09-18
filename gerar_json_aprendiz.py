@@ -16,11 +16,11 @@ import openpyxl
 
 BASE_DIR = r"C:\Users\Aprendiz Financeiro\BRASIL BOTOES LTDA\Público - Documentos\Catálogo Pronta Entrega"  # pasta onde está este script (catálogo)
 
-PLANILHA = Path(r"C:\Users\Aprendiz Financeiro\BRASIL BOTOES LTDA\Público - Documentos\Catálogo Pronta Entrega\_testes_aprendiz\ESTOQUES PROJETO V2 - Saldos2_teste.xlsm")
-TABELA_CORES = Path(r"C:\Users\Aprendiz Financeiro\BRASIL BOTOES LTDA\Público - Documentos\Catálogo Pronta Entrega\apoio\tabela_cores_final.xlsx")
+PLANILHA = Path(r"C:\Users\Aprendiz Financeiro\Downloads\macrocor\site meu\ESTOQUES PROJETO V2 - Saldos2_teste.xlsm")
+TABELA_CORES = Path(r"C:\Users\Aprendiz Financeiro\Downloads\macrocor\site meu\apoio\tabela_cores_final.xlsx")
 PASTA_FOTOS_ORIGEM = Path(r"C:\Users\Usuario\BRASIL BOTOES LTDA\Produtos - Documentos\Itens Classificados")
-PASTA_IMAGENS = Path(r"C:\Users\Aprendiz Financeiro\BRASIL BOTOES LTDA\Público - Documentos\Catálogo Pronta Entrega\imagens")
-ARQUIVO_JSON = Path(r"C:\Users\Aprendiz Financeiro\BRASIL BOTOES LTDA\Público - Documentos\Catálogo Pronta Entrega\produtos.json")
+PASTA_IMAGENS = Path(r"C:\Users\Aprendiz Financeiro\Downloads\macrocor\site meu\imagens")
+ARQUIVO_JSON = Path(r"C:\Users\Aprendiz Financeiro\Downloads\macrocor\site meu\produtos.json")
 
 # ─── HELPERS ──────────────────────────────────────────────────────────────────
 
