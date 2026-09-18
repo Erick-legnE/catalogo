@@ -55,5 +55,24 @@
     "unidade": "GR",
     "cliente": "VIZOO BRASIL MODAS LTDA",
     "foto": null
+  },
+  {
+    "cod_red": "104270001",
+    "modelo": "10427",
+    "tamanho": "18",
+    "cor_codigo": "C002",
+    "tingimento": null,
+    "personalizacao": "P15502 - LEE JEANS",
+    "cor_nome": "MARROM",
+    "cor_familia": null,
+    "cor_hex": null,
+    "furacao": "4F",
+    "acabamento": "FOSCO PERSONALIZADO",
+    "material": "POLIESTER",
+    "descricao": "BOTAO POL 10427 4F TAM 18 COR C002 FOSCO PERS",
+    "qtd_saldo": 16,
+    "unidade": "GR",
+    "cliente": "DRC COM. DE ART. DE ARMARINHO LTDA.",
+    "foto": "imagens/10427_C002_4F.png"
   }
 ]

@@ -39,12 +39,12 @@ import openpyxl
 
 # ======================= CONFIGURACAO =======================
 # Planilha de Clientes (a que voce enviou / atualiza)
-PLANILHA_CLIENTES = r"C:\Users\Usuario\BRASIL BOTOES LTDA\Estoque - Documentos\2026\ESTOQUES PROJETO V2 - Clientes.xlsm"
+PLANILHA_CLIENTES = r"C:\Users\Aprendiz Financeiro\Downloads\macrocor\site meu\_testes_aprendiz\ESTOQUES PROJETO V2 - Clientes_teste.xlsm"
 ABA_CLIENTES = "Cliente"
 LINHA_CABECALHO = 11   # linha do cabecalho na planilha (a partir dela, +1 = dados)
 
 # Pasta raiz do catalogo (onde fica o index.html geral, imagens/, etc.)
-PASTA_CATALOGO = r"C:\Users\Usuario\BRASIL BOTOES LTDA\Público - Documentos\Catálogo Pronta Entrega"
+PASTA_CATALOGO = r"C:\Users\Aprendiz Financeiro\Downloads\macrocor\site meu"
 # Caminhos confirmados em 16/08/2026 - se a planilha ou a pasta forem movidas, ajuste aqui.
 
 # Tabela de cores (nome/familia/hex) - referencia compartilhada, nao e dado do catalogo geral
@@ -60,7 +60,7 @@ TEMPLATE_INDEX = os.path.join(PASTA_CATALOGO, "apoio", "template_representante_i
 PASTA_REPRESENTANTES = os.path.join(PASTA_CATALOGO, "representantes")
 
 # Link do catalogo geral (para o botao "Ver catalogo geral" em cada pagina)
-LINK_CATALOGO_GERAL = "https://brasilbotoes.github.io/catalogo"
+LINK_CATALOGO_GERAL = "https://brasilbotoes.github.io/catalogo_geral.html"
 
 # Apelidos curtos para a URL de cada representante (opcional, mas RECOMENDADO).
 # Quem estiver aqui usa exatamente esse slug (fixo, nunca muda). Quem nao estiver

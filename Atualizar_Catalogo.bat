@@ -33,12 +33,12 @@ if %errorlevel% neq 0 (
 
 echo.
 echo [3/4] Enviando para o GitHub...
-"C:\Program Files\Git\bin\git.exe" add -A
-"C:\Program Files\Git\bin\git.exe" commit -m "Atualizacao %date%"
+git add -A
+git commit -m "Atualizacao %date%"
 if %errorlevel% neq 0 (
     echo  Nenhuma alteracao detectada ou erro no commit.
 )
-"C:\Program Files\Git\bin\git.exe" push origin main
+git push origin master
 if %errorlevel% neq 0 (
     echo.
     echo  ERRO ao enviar para o GitHub.

@@ -16,7 +16,7 @@ import openpyxl
 
 BASE_DIR = Path(__file__).parent  # pasta onde está este script (catálogo)
 
-PLANILHA = Path(r"C:\Users\Usuario\BRASIL BOTOES LTDA\Estoque - Documentos\2026\ESTOQUES PROJETO V2 - Saldos2.xlsm")
+PLANILHA = Path(r"C:\Users\Aprendiz Financeiro\Downloads\macrocor\site meu\_testes_aprendiz\ESTOQUES PROJETO V2 - Saldos2_teste.xlsm")
 TABELA_CORES = BASE_DIR / "apoio" / "tabela_cores_final.xlsx"
 PASTA_FOTOS_ORIGEM = Path(r"C:\Users\Usuario\BRASIL BOTOES LTDA\Produtos - Documentos\Itens Classificados")
 PASTA_IMAGENS = BASE_DIR / "imagens"
